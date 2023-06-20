@@ -1,0 +1,140 @@
+* {
+	background-color: #FFEEEE;
+	color: #191919;
+	font-family: arial;
+	line-height: 1.6;
+}
+
+h1 {
+	text-align: center;
+}
+
+.navbar {
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 25px;
+	margin-top: 10px;
+}
+.navbar a {
+	float: right;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-size: 18px;
+}
+.navbar a:hover {
+	background-color: #E4C2C1;
+	color: #191919;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+
+}
+.content-container {
+	width: 70%;
+	margin: 0 auto;
+	background-color: #FAFAFA;
+	padding: 15px;
+	border-radius: 15px;
+	padding-bottom: 0;
+	white-space: nowrap;
+    overflow-x: auto;
+	
+
+}
+.content-container * {
+	margin-bottom: 15px;
+	margin-right: 10px;
+	background-color: #FAFAFA;
+}
+
+.button {
+  background-color: #FEF2F2;
+  border-radius: 3px;
+  border: 1px solid #E4C2C1;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #191919;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.15385;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #E4C2C1;
+  color: #191919;
+}
+/*
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}*/
+input[type=submit] {
+	background-color: #FEF2F2;
+  border-radius: 3px;
+  border: 1px solid #E4C2C1;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #191919;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.15385;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+input[type=submit]:hover {
+	background-color: #E4C2C1;
+    color: #191919;
+}
+input[name=save_submit] {
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	background-color:#E4C2C1;
+}
+input[name=save_submit]:hover {
+	background-color:#B6666F;
+}
+/*
+label {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+hr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+	display: inline-block;
+}
+*/

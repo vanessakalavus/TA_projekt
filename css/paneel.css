@@ -1,0 +1,243 @@
+* {
+	background-color: #FFEEEE;
+	color: #191919;
+}
+  
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	/* margin: 6px; */
+	line-height: 2em;
+	margin-right: 8px;
+}
+  
+h1,
+h2,
+p {
+	text-align: center;
+}
+  
+h1 {
+	font-size: 35px;
+	top: 10%;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+h2 {
+	font-size: 28px;
+	font-weight: 500;
+}
+  
+p {
+	font-size: 20px;
+	text-align: center;
+}
+  
+.sisu {
+	margin-top: 25px;
+	position: absolute;
+	/*top: 40%;*/
+	left: 50%;
+	transform: translate(-50%);
+	width: 600px;
+	font-size: 25px;
+}
+  
+.log-out {
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 25px;
+}
+  
+.log-out a {
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	color: #191919;
+	padding: 20px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+	background-color: #FFEEEE;
+}
+  
+.log-out a:hover {
+	color: #191919;
+}
+  
+#parempool {
+	float: right;
+}
+  
+#vasakpool {
+	float: left;
+}
+  
+button {
+	background-color: #e4c2c1;
+	border-radius: 3px;
+	border: 1px solid #e4c2c1;
+	box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+	box-sizing: border-box;
+	color: #191919;
+	cursor: pointer;
+	display: inline-block;
+	font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.15385;
+	outline: none;
+	padding: 10px 1em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+  
+button:hover {
+	background-color: #ce747e;
+	color: #191919;
+}
+
+.sisu button {
+	margin: 10px;
+	width: 250px;
+	padding: 12px 20px;
+	transition: all 0.3s ease;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.sisu button:hover {
+	transform: scale(1.05);
+}
+  
+h1 {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+.log-out a {
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+  
+.log-out a:hover {
+	background-color: #E4C2C1;;
+}
+  
+
+
+/* * {
+	background-color:#FEF2F2;
+	color: #191919;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin: 6px;
+	line-height: 2em;
+	margin-right: 8px;
+	
+}
+h1, h2, p { 
+	text-align: center;
+}
+h1 {
+	font-size: 35px;
+	top: 10%;
+}
+h2 {
+	font-size: 28px;
+	font-weight: 500;
+}
+p {
+	font-size: 20px;
+	float: center;
+
+}
+.sisu {
+	margin-top: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.log-out {
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 25px;
+}
+.log-out a {
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	color: #191919;
+	padding: 20px;
+}
+.log-out a:hover {
+	background-color: #E4C2C1;
+}
+
+.sisu {
+	width: 600px;
+	margin: auto;
+	font-size: 25px;
+	
+}
+
+.sisu button {
+	margin: 0;
+	font-size: 20px;
+	width: 250px;
+	padding: 10px 0px;
+}
+.paneel {
+}
+.paneel * {
+	
+}
+#parempool {
+	float: right;
+}
+
+#vasakpool {
+	float: left;
+}
+
+button {
+	background-color: #FAFAFA;
+	border-radius: 3px;
+	border: 1px solid #E4C2C1;
+	box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+	box-sizing: border-box;
+	color: #191919;
+	cursor: pointer;
+	display: inline-block;
+	font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.15385;
+	outline: none;
+	padding: 8px .8em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+
+button:hover {
+	background-color: #E4C2C1;
+	color: #191919;
+} */

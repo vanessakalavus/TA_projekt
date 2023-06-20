@@ -1,0 +1,212 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 2.2em;
+	margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+	  font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+	  font-size: 21px;
+  }
+}
+
+.container {
+	width: 910px;
+	margin: auto;
+}
+
+#showcase {
+	background-image: url('../showcase.png');
+	background-size: cover;
+	height: 400px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+h1 {
+	text-align: center;
+	font-size: 2em; 
+	margin: 0;
+}
+
+#welcome {
+	position: relative;
+	top: 200px;
+	padding: 50px;
+	padding-bottom: 60px;
+	background-color: white;
+	width: 650px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#topbar {
+	background-color: lightblue;
+	margin: 0;
+}
+
+#topbar ul {
+	margin: 0;
+	padding: 5px;
+}
+
+#topbar li {
+	display: inline;
+	margin: 0px 10px;;
+}
+
+#navbar {
+	color: white;
+	background-color: lightblue;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+
+#navbar ul {
+	text-align: right;
+	margin: 0;
+	padding: 20px;
+}
+
+#navbar li {
+	font-size: 1.2em;
+	display: inline;
+	padding: 20px;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: white;
+}
+#materials {
+	display:flex;
+	flex-wrap:wrap;
+	overflow-y:hidden;
+	margin-bottom: 50px;
+}
+
+#post {
+	display: inline-block;
+	position: relative;
+	padding: 20px;
+	width: 260px;
+	height: 400px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	#post {
+		position: relative;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#post p {
+		margin-left: auto;
+		margin-right: auto;
+		width: 500px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+  #post {
+		position: relative;
+    width: 350px;
+		height: 550px;
+  }
+}
+
+#post button {
+	background-color: darkblue;
+	color: white;
+	font-size: 1em;
+	position: absolute;
+	bottom: 40px;
+	padding: 15px 25px;
+	left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#post img{
+	width: 100%;
+	height: 150px;
+}
+
+#chat {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	line-height: 2.2em;
+	display: block;
+	float: right;
+	background-color: lightgray;
+	width: 275px;
+	height: 350px;
+	bottom: -300px;
+	right: 0;
+	position: fixed;
+}
+
+#chat h2 {
+	color: white;
+	text-align: center;
+	background-color: blue;
+	margin: 0;
+	padding: 10px 0px
+	
+}
+
+#chat label {
+	margin-left: 5px;
+}
+
+#chat input {
+	margin-left: 5px;
+	margin-bottom: 8px;
+	width: 95%;
+	font-size: 16px;
+}
+
+#chat textarea {
+	margin-left: 5px;
+	margin-bottom: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	width: 95%;
+}
+
+#chat button {
+	float: right;
+	margin-right: 10px;
+	font-size: 16px;
+	padding: 4px 10px;
+	background-color: blue;
+	color: white;
+}
+
+#teavitus {
+	position: absolute;
+	bottom: -20px;
+	right: 10px;
+}

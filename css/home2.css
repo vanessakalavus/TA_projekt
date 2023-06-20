@@ -1,0 +1,247 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 2.2em;
+	margin: 0;
+	overflow-x: hidden; 
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+	  font-size: 2.6vh;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+	  font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+	.container {
+		width: 100vw;
+		
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.container {
+		width: 1250px;
+	}
+}
+
+#topbar {
+	position: absolute;
+	width: 100vw;
+	top: 0;
+	z-index: 2;
+}
+
+#topbar ul {
+	padding: 0px 25px;
+}
+
+#topbar li {
+	display: inline;
+	margin: 0;
+	color: black;
+}
+
+.avavaade {
+	height: 100vh;
+	/*height: 100dvh;*/
+	position: relative;
+	background-image: url('../testx.png');
+	background-size: cover;
+	max-width: 100vw;
+}
+
+.bottom {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+	line-height: 9vh;
+	text-align: center;
+	color: white;
+}
+
+.bottom button {
+	color: white;
+	background: transparent;
+	padding: 20px 30px;
+	border-width: medium;
+	font-size: 0.8em;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2em; 
+	margin: 0;
+}
+
+#tutvustus {
+	position: relative;
+	height: 100vh;
+}
+
+#materials {
+	display:flex;
+	flex-wrap:wrap;
+	overflow-y:hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1100px;
+	max-width: 100vw;
+}
+
+#post {
+	box-sizing: border-box;
+	position: relative;
+	width: 33.3%;
+	height: 33em;
+	
+}
+
+#post p {
+	margin: 40px;
+}
+
+#post p, h2 {
+	text-align: center;
+	margin-top: 40px;
+}
+
+#post button {
+	background-color: darkblue;
+	color: white;
+	font-size: 1em;
+	position: absolute;
+	bottom: 8%;
+	padding: 1em 1.2em;
+	left: 50%;
+  transform: translate(-50%, -2em);
+	cursor: pointer;
+}
+
+span {
+	opacity: 0;
+	transition: all 0.4s ease;
+	transform: translateY(50px);
+	display: inline-block;
+}
+
+span.fade {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+@media only screen and (max-width: 1000px) {
+	#tutvustus {
+		height: 300vh;
+		/*height: 300dvh;*/
+	}
+	
+	#materials {
+		width: 100%;
+	}
+
+	#post {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		/*height: 100dvh;*/
+	}
+	
+	#post p {
+	  margin: 0 10vw;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	}
+
+	#post h2 {
+		margin-top: 2em;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	#materials {
+		width: 1400px;
+	}
+}
+
+#post img{
+	width: 100%;
+	height: 150px;
+}
+
+#chat {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	line-height: 2.2em;
+	display: block;
+	float: right;
+	background-color: #b5d1e3;
+	width: 275px;
+	height: 350px;
+	bottom: -300px;
+	right: 0;
+	position: fixed;
+}
+
+#chat h2 {
+	color: white;
+	text-align: center;
+	background-color: blue;
+	margin: 0;
+	padding: 10px 0px;
+	cursor: pointer;
+	
+}
+
+#chat label {
+	margin-left: 5px;
+}
+
+#chat input {
+	margin-left: 5px;
+	margin-bottom: 8px;
+	width: 255px;
+	font-size: 16px;
+}
+
+#chat textarea {
+	margin-left: 5px;
+	margin-bottom: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	width: 255px;
+}
+
+#chat button {
+	float: right;
+	margin-right: 10px;
+	font-size: 16px;
+	padding: 4px 10px;
+	background-color: blue;
+	color: white;
+}
+
+#teavitus {
+	position: absolute;
+	bottom: -20px;
+	right: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+	#chat {
+		display: none;
+	}
+}

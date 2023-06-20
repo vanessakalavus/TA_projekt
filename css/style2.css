@@ -1,0 +1,95 @@
+body {
+	font-family: arial;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.banner {
+	float: left;
+	height: 75px;
+	cursor: pointer;
+}
+
+#navbar {
+	color: white;
+	background-color: #7AB6FF;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+#navbar ul {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 20px;
+	margin: 0;
+}
+
+#navbar li {
+	float: right;
+	padding: 0.25em;
+	margin: 0 0.5em;
+	cursor: pointer;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: white;
+}
+
+.main_title {
+	text-align: center;
+	margin: 3rem 0;
+}
+
+.main {
+	width: 100ch;
+	margin: auto;
+	position: relative;
+}
+
+.content {
+	float: right;
+	width: 70ch;
+}
+
+.sitemap {
+	float: left;
+	width: 30ch;
+}
+
+.collapsible {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  border-style: solid none
+}
+
+.poll {
+  padding: 1em;
+  display: none;
+  overflow: hidden;
+  border-left: solid 1px;
+}
+
+.anwser {
+	width: calc(100% - 0.5rem);
+	font-size: 1rem;
+	margin-bottom: 1em;
+}
+
+.complete {
+	width: 31%;
+	font-size: 1em;
+	padding: 1rem 0;
+}
+
+.sided {
+	width: 28ch;
+	position: absolute;
+	left: 0;
+}

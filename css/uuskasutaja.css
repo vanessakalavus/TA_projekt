@@ -1,0 +1,108 @@
+/* uuskasutaja.css */
+*{
+  	color: #191919;
+}
+
+.navbar {
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 25px;
+	margin-top: 9px;
+}
+.navbar a {
+	float: right;
+	text-align: center;
+	padding: 25px;
+	text-decoration: none;
+	font-size: 18px;
+}
+.navbar a:hover {
+	background-color: #E4C2C1;
+	color: #191919;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+
+}
+
+
+body{
+  	/*background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png");*/
+  	background-color: #FFEEEE;
+  	font-family: Arial, sans-serif;
+	margin-right: 3px;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.form-container {
+  	width: 500px;
+  	background-color: #e4c2c1;
+  	padding: 20px;
+  	border-radius: 10px;
+}
+
+.form-title {
+  	text-align: center;
+  	margin-bottom: 20px;
+}
+
+.form-group {
+  	margin-bottom: 15px;
+}
+
+label {
+  	display: block;
+ 	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	width: 90%;
+	padding: 15px;
+	border: none;
+	border: 1px solid #4d3434;
+	border-radius: 4px;
+	background-color: #fef2f2;
+	transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+	outline: none;
+	border-bottom-color: #767cee;
+}
+
+.password-field {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.password-field input[type="checkbox"] {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	cursor: pointer;
+	background-color: #b6666f;
+}
+
+input[type="submit"] {
+	background-color: #b6666F;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 18px;
+}
+	input[type="submit"]:hover {
+  	background-color: #ce747e;
+}
+

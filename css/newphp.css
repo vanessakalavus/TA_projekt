@@ -1,0 +1,96 @@
+body {
+	font-family: arial;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.banner {
+	float: left;
+	height: 75px;
+	cursor: pointer;
+}
+
+#navbar {
+	color: white;
+	background-color: #7AB6FF;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+#navbar ul {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 20px;
+	margin: 0;
+}
+
+#navbar li {
+	float: right;
+	padding: 0.25em;
+	margin: 0 0.5em;
+	cursor: pointer;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	margin: 3rem 0;
+}
+
+.main {
+	width: min(65ch, 100% - 2.5rem);
+	margin: auto;
+}
+
+.collapsible {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  border-style: solid none
+}
+
+.poll {
+  padding: 1em;
+  display: none;
+  overflow: hidden;
+  border-left: solid 1px;
+}
+
+input {
+	width: calc(100% - 1em);
+	margin-bottom: 1em;
+}
+
+button {
+	font-size: 0.8rem;
+	padding: 10px;
+}
+
+textarea {
+	width: calc(100% - 1em);
+	margin-bottom: 1em;
+	resize: none;
+	font-family: serif;
+}
+
+@media print {
+  textarea {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+#result {
+	display: none;
+}

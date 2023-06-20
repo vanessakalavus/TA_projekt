@@ -1,0 +1,74 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	line-height: 2em;
+}
+
+.container {
+	width: 800px;
+	margin: auto;
+}
+
+.sisu {
+	width: 800px;
+	margin: auto;
+	font-size: 25px;
+	
+}
+
+.sisu button {
+	margin: 0;
+	font-size: 20px;
+	width: 250px;
+	padding: 10px 0px;
+}
+
+h1 {
+	text-align: center;
+	margin: 2em 0;
+}
+
+.container input, textarea {
+	font-family: Fira Code;
+	width: 400px;
+	max-width: 550px;
+	min-width: 250px;
+}
+
+#parempool {
+	float: right;
+}
+
+#vasakpool {
+	float: left;
+}
+
+.kysimus {
+	margin-left: 100px;
+}
+
+#kysimus_sisestus {
+	width: 300px;
+}
+
+#topbar {
+	background-color: #7AB6FF;
+	margin: 0;
+}
+
+#topbar ul {
+	margin: 0;
+	padding: 5px;
+}
+
+#topbar li {
+	display: inline;
+	margin: 0px 10px;
+	color: black;
+}
+
+button {
+	padding: 4px;
+	margin: 5px 0;
+}
