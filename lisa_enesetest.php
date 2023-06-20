@@ -19,6 +19,7 @@
 	$page_section = 0;
 	$test_case = 0;
 	$scenario = null;
+	
 
 	$question1 = null;
 	$solution1 = null;
@@ -46,6 +47,8 @@
 		$test_case = $id;
 		$scenario = $juht;
 		$support = $supp;
+	}else{
+		$support=null;
 	}
 	$stmt->close();
 	//echo $test_case;
@@ -106,7 +109,7 @@
 
 	// Vajaliku informatsiooni salvestamine andmebaasi peale nupu vajutust
 	if (isset($_POST['enesetesti_salvestamine'])) {
-		$scenario = $_POST["postituse_tutvustus"];
+		$scenario = $_POST["myTextarea2"];
 		$support = $_POST["myTextarea"];
 
 
@@ -232,7 +235,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/enesetest.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<input type="hidden" id="x" value="<?php echo $x; ?>">
 	<script type="text/javascript" src="js/add_question.js" defer></script>
@@ -260,6 +263,25 @@
 		content_css: 'css/content.css'
 		});
 	</script>
+	<script type="text/javascript">
+		tinymce.init({
+		selector: '#myTextarea2',
+		width: 600,
+		height: 300,
+		plugins: [
+		'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+		'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+		'media', 'table', 'template', 'help'
+		],
+		toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+		'bullist numlist outdent indent | link image | print preview media fullscreen | ',
+		menu: {
+		favs: { title: 'My Favorites', items: 'code visualaid | searchreplace' }
+		},
+		menubar: 'favs file edit view insert tools table help',
+		content_css: 'css/content.css'
+		});
+	</script>
 	<title>Enesetesti loomine</title>
 </head>
 <body>
@@ -267,7 +289,7 @@
 		<a href="?logout=1"><i class="fa fa-sign-out" style="background-color: transparent;"></i> Logi välja</a>
 		<a href="paneel.php">Haldaja paneel</a>
 	</div>
-	<h1>Lisa uus enesetest</h1>
+	<h1>Enesetesti muutmise/lisamise vorm</h1>
 	<div class="main">	
 		<!--<p><?php echo $notice;?></p>-->
 		<form method="POST" action="<?php echo $_SERVER['PHP_SELF']."?id=". $page_section; ?>">
@@ -278,7 +300,7 @@
 		<label for="pealkiri">Lõigu pealkiri</label><br>
 		<input type="text" id="postituse_pealkiri" name="postituse_pealkiri" placeholder="Anna lõigule unikaalne nimetus" value="<?php echo $section_title; ?>" maxlength="50"><br>
 		<label for="tutvustus">Enesetesti stsenaariumi kirjeldus:</label><br>
-		<textarea id="postituse_tutvustus" name="postituse_tutvustus" rows="10" maxlength="2000" placeholder="Kirjelda enesetesti juhtumit"><?php echo $scenario; ?></textarea><br>
+		<textarea id="myTextarea2" name="myTextarea2" rows="10" placeholder="Kirjelda enesetesti juhtumit"><?php echo $scenario; ?></textarea><br>
 		
 		<label for="myTextarea">Abistav materjal</label><br>
 		<textarea id="myTextarea" name="myTextarea" placeholder="Siia saab sisestada vihjeid/toetavat materjali küsimustele vastamiseks. Hüperlinkida/pilte lisada saab insert funktsiooni kaudu."><?php echo $support; ?></textarea><br>
