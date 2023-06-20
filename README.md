@@ -23,7 +23,8 @@ Failide selgitus
 Igal failil on lõpus punktiga kirjas, et millist keelt on failis kasutatud. Ainult php falides on koos nii HTML osa kui ka PHP osa. Kui faili lõpus on css, sii on tegu css koodi failiga ja kui lõpus on .js siis on tegu JavaScript failiga.
 
 Selleks, et veebilehte paigaldada tuleb kõigepealt ära teha andmebaas. Meie poolt loodud andmebaas näeb väla järgnev: 
-![andmebaasi mudel](https://github.com/vanessakalavus/TA_projekt/assets/115349223/4984caee-c5d2-4aa9-a1c6-7f949487e277)
+![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb)
+
 
 Lisame reposse ka andmebaasi genereerimise skripti.
 Pärast andmebaasi tekitamist tuleb leida veebilehtedele majutus. Kui otsida veebilehtedele majutust tuleb kindlasti arvestada et õpilaste, õpetajate ja haridusjuhtide teksti ja testimaterjalid tulevad andmebaasist.
