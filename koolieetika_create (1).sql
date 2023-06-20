@@ -1,98 +1,100 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2023-06-19 18:10:36.445
+-- Last modification date: 2023-06-20 12:08:21.554
 
 -- tables
--- Table: category
-CREATE TABLE category (
+-- Table: dokument
+CREATE TABLE dokument (
     id int  NOT NULL AUTO_INCREMENT,
-    name varchar(30)  NOT NULL,
-    language varchar(1)  NOT NULL,
-    CONSTRAINT category_pk PRIMARY KEY (id)
+    tekstiloik_id int  NOT NULL,
+    nimi varchar(100)  NOT NULL,
+    CONSTRAINT dokument_pk PRIMARY KEY (id)
 );
 
--- Table: document
-CREATE TABLE document (
+-- Table: enesetest
+CREATE TABLE enesetest (
     id int  NOT NULL AUTO_INCREMENT,
-    page_section_id int  NOT NULL,
-    name varchar(100)  NOT NULL,
-    CONSTRAINT document_pk PRIMARY KEY (id)
+    tekstiloik_id int  NOT NULL,
+    juhtum blob  NOT NULL,
+    tugimaterjal blob  NULL,
+    CONSTRAINT enesetest_pk PRIMARY KEY (id)
+);
+
+-- Table: haldaja
+CREATE TABLE haldaja (
+    id int  NOT NULL AUTO_INCREMENT,
+    username varchar(50)  NOT NULL,
+    password varchar(100)  NOT NULL,
+    email varchar(50)  NOT NULL,
+    kustutatud datetime  NULL,
+    CONSTRAINT haldaja_pk PRIMARY KEY (id)
+);
+
+-- Table: kategooria
+CREATE TABLE kategooria (
+    id int  NOT NULL AUTO_INCREMENT,
+    nimetus varchar(30)  NOT NULL,
+    keel varchar(1)  NOT NULL,
+    CONSTRAINT kategooria_pk PRIMARY KEY (id)
 );
 
 -- Table: materjal
 CREATE TABLE materjal (
     id int  NOT NULL AUTO_INCREMENT,
-    page_section_id int  NOT NULL,
+    tekstiloik_id int  NOT NULL,
     tekst blob  NOT NULL,
     CONSTRAINT materjal_pk PRIMARY KEY (id)
 );
 
--- Table: page_section
-CREATE TABLE page_section (
+-- Table: tekstiloik
+CREATE TABLE tekstiloik (
     id int  NOT NULL AUTO_INCREMENT,
-    category_id int  NOT NULL,
-    user_id int  NOT NULL,
-    title varchar(50)  NULL,
-    `order` int  NOT NULL,
-    added timestamp  NOT NULL,
-    changed datetime  NULL,
-    deleted datetime  NULL,
-    public bool  NULL,
-    type varchar(1)  NOT NULL,
-    CONSTRAINT page_section_pk PRIMARY KEY (id)
-);
-
--- Table: self_test
-CREATE TABLE self_test (
-    id int  NOT NULL AUTO_INCREMENT,
-    page_section_id int  NOT NULL,
-    `case` blob  NOT NULL,
-    support blob  NULL,
-    CONSTRAINT self_test_pk PRIMARY KEY (id)
-);
-
--- Table: users
-CREATE TABLE users (
-    id int  NOT NULL AUTO_INCREMENT,
-    username varchar(50)  NOT NULL,
-    password varchar(100)  NOT NULL,
-    email varchar(50)  NOT NULL,
-    CONSTRAINT users_pk PRIMARY KEY (id)
+    kategooria_id int  NOT NULL,
+    haldaja_id int  NOT NULL,
+    pealkiri varchar(50)  NULL,
+    jarjestus int  NOT NULL,
+    lisatud timestamp  NOT NULL,
+    muudetud datetime  NULL,
+    kustutatud datetime  NULL,
+    avalik bool  NULL,
+    liik varchar(1)  NOT NULL,
+    CONSTRAINT tekstiloik_pk PRIMARY KEY (id)
 );
 
 -- Table: vastusevali
 CREATE TABLE vastusevali (
     id int  NOT NULL AUTO_INCREMENT,
-    self_test_id int  NOT NULL,
-    question varchar(1000)  NOT NULL,
-    answer varchar(1000)  NULL,
-    deleted datetime  NULL,
+    enesetest_id int  NOT NULL,
+    kysimus varchar(1000)  NOT NULL,
+    vastus varchar(1000)  NULL,
+    jarjekord int  NOT NULL,
+    kustutatud datetime  NULL,
     CONSTRAINT vastusevali_pk PRIMARY KEY (id)
 ) COMMENT 'Ühe testküsimuse juures võib olla mitu vastusevälja.';
 
 -- foreign keys
--- Reference: alamkategooria_haldaja (table: page_section)
-ALTER TABLE page_section ADD CONSTRAINT alamkategooria_haldaja FOREIGN KEY alamkategooria_haldaja (user_id)
-    REFERENCES users (id);
+-- Reference: alamkategooria_haldaja (table: tekstiloik)
+ALTER TABLE tekstiloik ADD CONSTRAINT alamkategooria_haldaja FOREIGN KEY alamkategooria_haldaja (haldaja_id)
+    REFERENCES haldaja (id);
 
--- Reference: alamkategooria_kategooria (table: page_section)
-ALTER TABLE page_section ADD CONSTRAINT alamkategooria_kategooria FOREIGN KEY alamkategooria_kategooria (category_id)
-    REFERENCES category (id);
+-- Reference: alamkategooria_kategooria (table: tekstiloik)
+ALTER TABLE tekstiloik ADD CONSTRAINT alamkategooria_kategooria FOREIGN KEY alamkategooria_kategooria (kategooria_id)
+    REFERENCES kategooria (id);
 
--- Reference: dokument_tekstiloik (table: document)
-ALTER TABLE document ADD CONSTRAINT dokument_tekstiloik FOREIGN KEY dokument_tekstiloik (page_section_id)
-    REFERENCES page_section (id);
+-- Reference: dokument_tekstiloik (table: dokument)
+ALTER TABLE dokument ADD CONSTRAINT dokument_tekstiloik FOREIGN KEY dokument_tekstiloik (tekstiloik_id)
+    REFERENCES tekstiloik (id);
 
--- Reference: enesetest_tekstiloik (table: self_test)
-ALTER TABLE self_test ADD CONSTRAINT enesetest_tekstiloik FOREIGN KEY enesetest_tekstiloik (page_section_id)
-    REFERENCES page_section (id);
+-- Reference: enesetest_tekstiloik (table: enesetest)
+ALTER TABLE enesetest ADD CONSTRAINT enesetest_tekstiloik FOREIGN KEY enesetest_tekstiloik (tekstiloik_id)
+    REFERENCES tekstiloik (id);
 
 -- Reference: materjal_alamkategooria (table: materjal)
-ALTER TABLE materjal ADD CONSTRAINT materjal_alamkategooria FOREIGN KEY materjal_alamkategooria (page_section_id)
-    REFERENCES page_section (id);
+ALTER TABLE materjal ADD CONSTRAINT materjal_alamkategooria FOREIGN KEY materjal_alamkategooria (tekstiloik_id)
+    REFERENCES tekstiloik (id);
 
 -- Reference: vastusevali_enesetest (table: vastusevali)
-ALTER TABLE vastusevali ADD CONSTRAINT vastusevali_enesetest FOREIGN KEY vastusevali_enesetest (self_test_id)
-    REFERENCES self_test (id);
+ALTER TABLE vastusevali ADD CONSTRAINT vastusevali_enesetest FOREIGN KEY vastusevali_enesetest (enesetest_id)
+    REFERENCES enesetest (id);
 
 -- End of file.
 
