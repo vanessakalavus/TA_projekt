@@ -1,29 +1,21 @@
 # TA_projekt
 Koolieetika veebileht koos sisuhaldusplatvormiga
 Lühikirjeldus ning eesmärk:
-Projekt on loodud Tallinna Ülikooli esimese kursuse tudengite poolt “Tarkvara arenduse projekt” aine raames. Aine eesmärgiks on anda tudengitele kogemus tiimina rakenduse/veebilehe loomise algusest lõpuni loomisest. Projekti autoriteks on Karl Rebane, Märten Treier, Kaia Mia Kalda ja Vanessa Kalavus
+Projekt on loodud Tallinna Ülikooli esimese kursuse tudengite poolt “Tarkvara arenduse projekt” aine raames. Aine eesmärgiks on anda tudengitele kogemus tiimina rakenduse/veebilehe loomise algusest lõpuni loomisest. Projekti autoriteks on Karl Rebane, Märten Treier, Kaia Mia Kalda ja Vanessa Kalavus.
 
 Eesmärgiks on luua koolieetika teemasid kajastav sisuhaldusplatvorm, mis on lehe haldajale mugav ja lihtne kasutada. Lehekülg peab võimaldama külastajatel eneseteste sooritada ning enda vastuseid salvestada. Haldaja saab lisada materjale, teste, (haldajaõigustega) kasutajaid. Muuta materjalide, testide - sisu, järjekorda, seisundit ning muuta kasutajaandmeid. Samuti saab haldaja muuta oma kontaktandmeid ja parooli. Projekti tellijal on hetkel kasutusel lehekülg Wix’i platvormil, kus testide lisamine/sooritamine pole võimalik, sellest vajadus-huvi uue lahenduse vastu. Meie loodud lahenduses on võimalik veebilehte ka inglisekeelseks muuta.
 
 Veebilehel kasutatud keeled
-Veebilehel kasutasime nelja erinevat keelt, milleks on : HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition
-Keelte selgitus:
-HTML5, ehk (HyperText Markup Language) on keel mida kasutasime veebilehel veebilehtede struktuuri ja sisu loomiseks. HTML on aluseks veebisisu kuvamisele veebibrauserites. 
-
-HTML-i abil märgistatakse teksti ja elemente, et neid struktureerida ja määratleda nende tähendus veebilehel. Iga element koosneb avatähist, sisust ja suletähist ning neid kasutatakse erinevate osade, nagu pealkirjad, lõigud, lingid, pildid ja tabelid, määratlemiseks. All on toodud vormingu näited, mis on meeldetuletuseks toodud ka iga postituse lisamise juurde.
-
-CSS3, ehk (Cascading Style Sheets) on keel, mida kasutasime veebilehe kujunduse ja välimuse määratlemiseks. CSS töötab koos HTML-iga, et muuta veebilehe sisu atraktiivsemaks, kohandada selle paigutust ja värve ning anda ühtne visuaalne stiil kogu veebisaidile. Kui on soov veebilehe välimust muuta, siis tuleks kindlasti jälgida CSS keele häid tavasi, vastasel juhul kood ei tööta. Kuna tegu on range keelega võib veebilehe disain väikese vea puhul lakkada töötamast. Samuti on loodud keelega ka animatsioone.
-
-Javascript 13th edition on keel mida kasutasime veebilehtedel interaktiivsuse lisamiseks ja dünaamilise sisu loomiseks. See võimaldab veebilehel reageerida kasutaja tegevustele ja muuta veebileht dünaamiliseks.
-
-PHP 8.0.0 on programmeerimiskeel, mida kasutatakse veebirakenduste ja dünaamiliste veebilehtede loomiseks. PHP tähistab lühendit "Hypertext Preprocessor", mis viitab sellele, et see on skripti keel, mida kasutatakse HTMLi sees või eraldi failidena serveripoolse veebiarenduse jaoks. Meie kasutasime seda selleks, et kõik lisatud materjalid jõuaksid koos enesetestidega andmebaasi.
-Kõik eelmainitud keelt töötavad koos ja ükski neist ei ole täiesti iseseisev. 
+Veebilehel kasutasime nelja erinevat keelt, milleks on : HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition. Andmebaasina kasutasime MariaDB-d.
 
 Failide selgitus
 Igal failil on lõpus punktiga kirjas, et millist keelt on failis kasutatud. Ainult php falides on koos nii HTML osa kui ka PHP osa. Kui faili lõpus on css, sii on tegu css koodi failiga ja kui lõpus on .js siis on tegu JavaScript failiga.
 
-Selleks, et veebilehte paigaldada tuleb kõigepealt ära teha andmebaas. Meie poolt loodud andmebaas näeb väla järgnev: 
-![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb)
+Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, mis toetaks veebilehel kasutatud keeli. Järgnevalt tuleks teha andmebaas.
+Andmebaasile on vaja määrata serveri host, kasutajanimi, parool ja andmebaasi nimi. Määra endale kasutajanimi ja genereeri endale turvaline parool. Jäta kasutajanimi meelde ning kopeeri genereeritud parool endale turvalisse kohta. Andmebaasi nimeks panna if22_koolieetika2.
+Järgmiseks lisa config fail veebilehe kataloogist eraldi. Ava config2.php fail ning muuda $server_user_name ja $server_password väärtused vastavalt oma lisatud kasutajanimele ja genereeritud salasõnale.
+Kui varasemalt mainitud sammud on paigas,  tuleb järgmiseks tekitada andmebaasi tabelid. Tabelite loomiseks vajalik script näeb välja järgnev: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb).
+
 
 
 Lisame reposse ka andmebaasi genereerimise skripti.
