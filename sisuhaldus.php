@@ -14,11 +14,15 @@ require_once "Classes/SessionManager.class.php";
 		header("Location: sisselog.php");
 	    exit();
 	}
-    /*valitud kategooria*/
+	if(!isset($_SESSION['category'])) { 
+		$_SESSION['category'] = 1;
+	}
+
+    /*valitud kategooria
 	$category = 1;
 	if(isset($_POST["category"])){
 		$category = $_POST["category"];
-	}
+	}*/
 	/*echo $category;*/
 	
 	//DB ühenduse loomine
@@ -34,7 +38,7 @@ require_once "Classes/SessionManager.class.php";
 	$new_tekstiloik_id=$max_id_DB+1;
 
 	//kategooriate küsimise andmebaasist
-	$selected_category = isset($_POST["category"]) ? $_POST["category"] : $category;
+	$_SESSION['category'] = isset($_POST["category"]) ? $_POST["category"] : $_SESSION['category'];
 	$query2 = $conn->prepare("SELECT id, nimetus FROM kategooria");
 	echo $conn->error;
 	$query2->bind_result($category_id_DB,$category_name_DB);
@@ -43,7 +47,7 @@ require_once "Classes/SessionManager.class.php";
 	$category_html = null;
 	while ($query2->fetch()) {
 		$category_html .= '<option value="'.$category_id_DB .'"';
-		if ($category_id_DB == $selected_category) {
+		if ($category_id_DB == $_SESSION['category']) {
 		   $category_html .= ' selected';
 		}
 		$category_html .= '>';
@@ -55,14 +59,14 @@ require_once "Classes/SessionManager.class.php";
 	
 	//valitud kategooria materjalide päring
 	$max_stmt = $conn->prepare("SELECT max(jarjestus) FROM tekstiloik WHERE kategooria_id = ? AND kustutatud IS NULL");
-	$max_stmt->bind_param("i", $selected_category);
+	$max_stmt->bind_param("i", $_SESSION['category']);
 	$max_stmt->bind_result($max_order);
 	$max_stmt->execute();
 	$max_stmt->fetch();
 	$max_stmt->close();
 	$stmt = $conn->prepare("SELECT id, pealkiri, jarjestus, avalik, liik  FROM tekstiloik WHERE kategooria_id = ? AND kustutatud IS NULL ORDER BY jarjestus ASC");
 	echo $conn->error;
-	$stmt->bind_param("i", $selected_category);
+	$stmt->bind_param("i", $_SESSION['category']);
 	$stmt->bind_result($id_from_db, $title, $order, $status, $type);
 	$stmt->execute();
 	$html = null;
@@ -90,12 +94,12 @@ require_once "Classes/SessionManager.class.php";
 		$html .= '<a href="' . $ref_link . '" class="button" id="changeBtn">Muuda</a>';
 
 		$html .= '<form method="POST" action="' . htmlspecialchars($_SERVER["PHP_SELF"]) . '">';
-		$html .= '<input type="hidden" name="category" value="' . $selected_category . '">';
+		$html .= '<input type="hidden" name="category" value="' . $_SESSION['category'] . '">';
 		$html .= '<input type="submit" name="deleteBtn[' .$id_from_db .']" id="deleteBtn' .$id_from_db .'" value="Kustuta">';
 		$html .= '</form>';
 
 		$html .= '<form method="POST" action="'. htmlspecialchars($_SERVER["PHP_SELF"]) .'">';
-		$html .= '<input type="hidden" name="category" value="' .$selected_category .'">';
+		$html .= '<input type="hidden" name="category" value="' .$_SESSION['category'] .'">';
 		$html .= '<input type="hidden" name="id['.$id_from_db.']" value="' .$id_from_db .'">';
 		$html .= '<label for="orderValue">Järjestus:</label>';
 		$html .= '<input type="number" min="1" max="100" name="orderValue[' .$id_from_db .']" value="'. $order.'">';
@@ -216,14 +220,14 @@ if (isset($_POST["submit_txt"])){
 
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
 			<input type="hidden" name="testi_liik" value="E">
-			<input type="hidden" name="selected_category" value="<?php echo $selected_category; ?>">
+			<input type="hidden" name="selected_category" value="<?php echo $_SESSION['category']; ?>">
 			<input type="hidden" name="max_order_nr" value="<?php echo $max_order_nr; ?>">
 			<input type="submit" name="submit_test" id="newTestBtn" value="Lisa enesetest">
 		
 		</form>
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
 			<input type="hidden" name="teksti_liik" value="M">
-			<input type="hidden" name="selected_category" value="<?php echo $selected_category; ?>">
+			<input type="hidden" name="selected_category" value="<?php echo $_SESSION['category']; ?>">
 			<input type="hidden" name="max_order_nr" value="<?php echo $max_order_nr; ?>">
 			<input type="submit" name="submit_txt" id="newTextBtn" value="Lisa materjal">
 		</form> 
