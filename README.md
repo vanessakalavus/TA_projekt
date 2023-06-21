@@ -15,7 +15,7 @@ Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, m
 Andmebaasile on vaja määrata serveri host, kasutajanimi, parool ja andmebaasi nimi. Määra endale kasutajanimi ja genereeri endale turvaline parool. Jäta kasutajanimi meelde ning kopeeri genereeritud parool endale turvalisse kohta. Andmebaasi nimeks panna if22_koolieetika2.
 Järgmiseks lisa config fail veebilehe kataloogist eraldi. Ava config2.php fail ning muuda $server_user_name ja $server_password väärtused vastavalt oma lisatud kasutajanimele ja genereeritud salasõnale.
 Kui varasemalt mainitud sammud on paigas,  tuleb järgmiseks tekitada andmebaasi tabelid. Tabelite loomiseks vajalik script näeb välja järgnev: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb).
-
+Järgnevalt tuleks luua public_html kataloog samasse kohta, kuhu on lisatud config2.php fail. Alles loodud kausta tuleb lisada kõik veebilehe failid, sh php failid ning css, js ning classes kaustad.
 
 
 Lisame reposse ka andmebaasi genereerimise skripti.
