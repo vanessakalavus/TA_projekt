@@ -8,18 +8,21 @@ Eesmärgiks on luua koolieetika teemasid kajastav sisuhaldusplatvorm, mis on leh
 Veebilehel kasutatud keeled
 Veebilehel kasutasime nelja erinevat keelt, milleks on: HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition. Andmebaasina kasutasime MariaDB-d.
 
-Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, mis toetaks veebilehel kasutatud keeli. Veenduge, et teie valitud veebimajutusplatvorm toetab MySQL andmebaase.
+Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, mis toetaks eelmainitud keeli. Veenduge, et teie valitud veebimajutusplatvorm toetab MySQL andmebaase.
 
-Järgnevalt tuleks teha andmebaas. Andmebaasi lisamise võimalus peaks nähtavale tekkima kas juhtpaneeli (control panel) või andmebaasi haldamissektsiooni (database management section) valiku alt. 
-Andmebaasi lisamisel on vaja määrata serveri host, kasutajanimi, parool ja andmebaasi nimi. Määra endale kasutajanimi ja genereeri endale turvaline parool. Jäta kasutajanimi meelde ning kopeeri genereeritud parool endale turvalisse kohta. Andmebaasi nimeks panna if22_koolieetika2.
-Järgmiseks lisa config fail veebilehe kataloogist eraldi. Ava config2.php fail ning muuda $server_user_name ja $server_password väärtused vastavalt oma lisatud kasutajanimele ja genereeritud salasõnale. Veenduge, et vajalikud autentimissõned oleksid korrektsed ja jutumärkide sees.
-NB!: Juhul, kui määrasite andmebaasi nimeks midagi muud kui "if22_koolieetika2", peate ka config2.php failis muutma $database järel jutumärkidesse sisestatud nime oma uue lisatud nime vastu.
-Kui varasemalt mainitud sammud on paigas, tuleb järgmiseks tekitada andmebaasi tabelid. Tabelite loomiseks vajaliku skripti leiab koolieetika_create.sql failist. Skripti käivitamiseks soovitame kasutada phpMyAdmin liidest, mis on saadaval enamus MySQL-i pakkuvatel veebimajutustel. Võimalus pääseda phpMyAdmin vaatele peaks olema leitav veebimajutusplatvormi juhtpaneelilt "Databases" või muu sarnase valiku alt. Sealt edasi leiate oma andmebaasi nime alt valiku "Impordi" (või "Import", sõltuvalt keelest). Valige või lohistage koolieetika_create.sql fail lehele. Ülejäänud sätteid pole vaja muuta. Vajutage "Impordi" nupule ning peaksite saama teate, et skripti käivitamine õnnestus.
-Skripti kaudu tekitatud tabeleid ja nende relatsioone visualiseerib järgnev Vertabelo andmebaasimudel: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb).
+Järgnevalt tuleks teha andmebaas. Andmebaasi lisamise võimalus peaks nähtavale tekkima kas juhtpaneeli (control panel) või andmebaasi haldamissektsiooni (database management section) valiku alt. Kategooriate nimetused võivad varieeruda.
+
+Andmebaasi lisamisel on vaja määrata serveri host, kasutajanimi, parool ja andmebaasi nimi. Määra endale kasutajanimi ja genereeri endale turvaline parool. Jäta kasutajanimi meelde ning kopeeri genereeritud parool endale turvalisse kohta. Andmebaasi nimeks määrake if22_koolieetika2.
+
+Nüüd lisage config2.php nimeline fail juurkataloogi. Ava fail ning muuda $server_user_name ja $server_password väärtused vastavalt oma lisatud kasutajanimele ja genereeritud salasõnale. Kontrollige, et vajalikud autentimissõned oleksid korrektsed ja jutumärkides.
+
+NB!: Juhul, kui määrasite andmebaasi nimeks midagi muud kui "if22_koolieetika2", peate ka config2.php failis muutma $database järel jutumärkidesse sisestatud nime oma määratud nime vastu.
+
+Kui eelmainitud sammud on läbitud, tuleb järgmisena tekitada andmebaasi tabelid. Tabelite loomiseks vajaliku skripti leiab koolieetika_create.sql failist. Skripti käivitamiseks soovitame kasutada phpMyAdmin liidest, mis on saadaval enamus MySQL-i pakkuvatel veebimajutustel. Võimalus pääseda phpMyAdmin vaatele peaks olema leitav veebimajutusplatvormi juhtpaneelilt "Databases" või muu sarnase valiku alt. Sealt edasi leiate oma andmebaasi nime alt valiku "Impordi" (või "Import", sõltuvalt keelest). Valige või lohistage koolieetika_create.sql fail lehele. Ülejäänud sätteid pole vaja muuta. Vajutage "Impordi" nupule ning peaksite saama teate, et skripti käivitamine õnnestus.
+
+Skripti kaudu tekitatud tabeleid ja nende relatsioone visualiseerib järgnev Vertabelo andmebaasimudel: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb)
+
 Järgnevalt tuleks config2.php faili kõrvale luua uus kaust nimega "public_html". Alles loodud kausta tuleb luua veel üks uus kataloog nimega "koolieetika". Viimati tekitatud kausta lisage kõik veebilehe failid, sh php failid ja css, js ning classes kaustad.
-
-Lisame reposse ka andmebaasi genereerimise skripti.
-Pärast andmebaasi tekitamist tuleb leida veebilehtedele majutus. Kui otsida veebilehtedele majutust tuleb kindlasti arvestada et õpilaste, õpetajate ja haridusjuhtide teksti ja testimaterjalid tulevad andmebaasist.
 
 Pildid rakendusest: 
 
