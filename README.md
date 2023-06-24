@@ -6,15 +6,15 @@ Projekt on loodud Tallinna Ülikooli esimese kursuse tudengite poolt “Tarkvara
 Eesmärgiks on luua koolieetika teemasid kajastav sisuhaldusplatvorm, mis on lehe haldajale mugav ja lihtne kasutada. Lehekülg peab võimaldama külastajatel eneseteste sooritada ning enda vastuseid salvestada. Haldaja saab lisada materjale, teste, (haldajaõigustega) kasutajaid. Muuta materjalide, testide - sisu, järjekorda, seisundit ning muuta kasutajaandmeid. Samuti saab haldaja muuta oma kontaktandmeid ja parooli. Projekti tellijal on hetkel kasutusel lehekülg Wix’i platvormil, kus testide lisamine/sooritamine pole võimalik, sellest vajadus-huvi uue lahenduse vastu. Meie loodud lahenduses on võimalik veebilehte ka inglisekeelseks muuta.
 
 Veebilehel kasutatud keeled
-Veebilehel kasutasime nelja erinevat keelt, milleks on : HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition. Andmebaasina kasutasime MariaDB-d.
+Veebilehel kasutasime nelja erinevat keelt, milleks on: HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition. Andmebaasina kasutasime MariaDB-d.
 
-Failide selgitus
-Igal failil on lõpus punktiga kirjas, et millist keelt on failis kasutatud. Ainult php falides on koos nii HTML osa kui ka PHP osa. Kui faili lõpus on css, sii on tegu css koodi failiga ja kui lõpus on .js siis on tegu JavaScript failiga.
+Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, mis toetaks veebilehel kasutatud keeli. Veenduge, et teie valitud veebimajutusplatvorm toetab MySQL andmebaase.
 
-Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, mis toetaks veebilehel kasutatud keeli. Järgnevalt tuleks teha andmebaas.
-Andmebaasile on vaja määrata serveri host, kasutajanimi, parool ja andmebaasi nimi. Määra endale kasutajanimi ja genereeri endale turvaline parool. Jäta kasutajanimi meelde ning kopeeri genereeritud parool endale turvalisse kohta. Andmebaasi nimeks panna if22_koolieetika2.
-Järgmiseks lisa config fail veebilehe kataloogist eraldi. Ava config2.php fail ning muuda $server_user_name ja $server_password väärtused vastavalt oma lisatud kasutajanimele ja genereeritud salasõnale.
-Kui varasemalt mainitud sammud on paigas,  tuleb järgmiseks tekitada andmebaasi tabelid. Tabelite loomiseks vajalik skript on järgnev: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb).
+Järgnevalt tuleks teha andmebaas. Andmebaasi lisamise võimalus peaks nähtavale tekkima kas juhtpaneeli (control panel) või andmebaasi haldamissektsiooni (database management section) valiku alt. 
+Andmebaasi lisamisel on vaja määrata serveri host, kasutajanimi, parool ja andmebaasi nimi. Määra endale kasutajanimi ja genereeri endale turvaline parool. Jäta kasutajanimi meelde ning kopeeri genereeritud parool endale turvalisse kohta. Andmebaasi nimeks panna if22_koolieetika2.
+Järgmiseks lisa config fail veebilehe kataloogist eraldi. Ava config2.php fail ning muuda $server_user_name ja $server_password väärtused vastavalt oma lisatud kasutajanimele ja genereeritud salasõnale. Veenduge, et vajalikud autentimissõned oleksid korrektsed ja jutumärkide sees.
+NB!: Juhul, kui määrasite andmebaasi nimeks midagi muud kui "if22_koolieetika2", peate ka config2.php failis muutma $database järel jutumärkidesse sisestatud nime oma uue lisatud nime vastu.
+Kui varasemalt mainitud sammud on paigas, tuleb järgmiseks tekitada andmebaasi tabelid. Tabelite loomiseks vajaliku skripti leiab koolieetika_create.sql failist. Skripti käivitamiseks  ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb).
 Järgnevalt tuleks luua public_html kataloog samasse kohta, kuhu on lisatud config2.php fail. Alles loodud kausta tuleb lisada kõik veebilehe failid, sh php failid ning css, js ning classes kaustad.
 
 
