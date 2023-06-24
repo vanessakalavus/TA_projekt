@@ -5,8 +5,7 @@ Projekt on loodud Tallinna Ülikooli esimese kursuse tudengite poolt “Tarkvara
 
 Eesmärgiks on luua koolieetika teemasid kajastav sisuhaldusplatvorm, mis on lehe haldajale mugav ja lihtne kasutada. Lehekülg peab võimaldama külastajatel eneseteste sooritada ning enda vastuseid salvestada. Haldaja saab lisada materjale, teste, (haldajaõigustega) kasutajaid. Muuta materjalide, testide - sisu, järjekorda, seisundit ning muuta kasutajaandmeid. Samuti saab haldaja muuta oma kontaktandmeid ja parooli. Projekti tellijal on hetkel kasutusel lehekülg Wix’i platvormil, kus testide lisamine/sooritamine pole võimalik, sellest vajadus-huvi uue lahenduse vastu. Meie loodud lahenduses on võimalik veebilehte ka inglisekeelseks muuta.
 
-Veebilehel kasutatud keeled
-Veebilehel kasutasime nelja erinevat keelt, milleks on: HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition. Andmebaasina kasutasime MariaDB-d.
+Veebilehel kasutasime nelja erinevat keelt, milleks on HTML5, PHP 8.0.0, CSS3 ja JavaScript 13th edition. Andmebaasina kasutasime MariaDB-d.
 
 Selleks, et veebilehte paigaldada, tuleb kõigepealt leida sobiv veebimajutus, mis toetaks eelmainitud keeli. Veenduge, et teie valitud veebimajutusplatvorm toetab MySQL andmebaase.
 
