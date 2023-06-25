@@ -17,11 +17,11 @@ Nüüd lisage config2.php nimeline fail juurkataloogi. Ava fail ning muuda $serv
 
 NB!: Juhul, kui määrasite andmebaasi nimeks midagi muud kui "if22_koolieetika2", peate ka config2.php failis muutma $database järel jutumärkidesse sisestatud nime oma määratud nime vastu.
 
-Kui eelmainitud sammud on läbitud, tuleb järgmisena tekitada andmebaasi tabelid. Tabelite loomiseks vajaliku skripti leiab koolieetika_create.sql failist. Skripti käivitamiseks soovitame kasutada phpMyAdmin liidest, mis on saadaval enamus MySQL-i pakkuvatel veebimajutustel. Võimalus pääseda phpMyAdmin vaatele peaks olema leitav veebimajutusplatvormi juhtpaneelilt "Databases" või muu sarnase valiku alt. Sealt edasi leiate oma andmebaasi nime alt valiku "Impordi" (või "Import", sõltuvalt keelest). Valige või lohistage koolieetika_create.sql fail lehele. Ülejäänud sätteid pole vaja muuta. Vajutage "Impordi" nupule ning peaksite saama teate, et skripti käivitamine õnnestus.
+Kui eelmainitud sammud on läbitud, tuleb järgmisena tekitada andmebaasi tabelid. Tabelite loomiseks vajalikud sql käsud on "koolieetika_create.sql" failis. Käsud saab kopeerida ning sisestada kasutades phpMyAdmin liidest, mis on saadaval enamus MySQL-i pakkuvatel veebimajutustel. Võimalus pääseda phpMyAdmin vaatele peaks olema leitav veebimajutusplatvormi juhtpaneelilt "Databases" või muu sarnase valiku alt. Sealt edasi leiate oma andmebaasi nime alt valiku "Impordi" (või "Import", sõltuvalt keelest). Valige või lohistage koolieetika_create.sql fail lehele. Ülejäänud sätteid pole vaja muuta. Vajutage "Impordi" nupule ning peaksite saama teate, et skripti käivitamine õnnestus. 
 
-Skripti kaudu tekitatud tabeleid ja nende relatsioone visualiseerib järgnev Vertabelo andmebaasimudel: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb)
+Andmetabeleid ja nende relatsioone visualiseerib järgnev Vertabelo andmebaasimudel: ![db final](https://github.com/vanessakalavus/TA_projekt/assets/115349223/0e253d46-0d68-45b5-b5a1-ea9e3a563cdb)
 
-Järgnevalt tuleks config2.php faili kõrvale luua uus kaust nimega "public_html". Alles loodud kausta tuleb luua veel üks uus kataloog nimega "koolieetika". Viimati tekitatud kausta lisage kõik veebilehe failid, sh php failid ja css, js ning classes kaustad.
+Järgnevalt tuleks config2.php failiga samasse kausta luua uus kaust nimega "public_html". Public_html kausta tuleb luua uus kataloog/kaust nimega "koolieetika". Koolieetika kausta lisage kõik githubi repo failid, st. php failid ja css, js ning classes kaustad. 
 
 Pildid rakendusest: 
 
